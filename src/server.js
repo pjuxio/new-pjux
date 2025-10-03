@@ -51,8 +51,8 @@ app.get('/', async (req, res) => {
     const eventsContent = JSON.parse(
       await fs.readFile(path.join(__dirname, `../data/events/${language}.json`), 'utf-8')
     );
-    const servicesContent = JSON.parse(
-      await fs.readFile(path.join(__dirname, `../data/services/${language}.json`), 'utf-8')
+    const featuredservicesContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/featuredServices/${language}.json`), 'utf-8')
     );
     const approachCTAContent = JSON.parse(
       await fs.readFile(path.join(__dirname, `../data/approachCTA/${language}.json`), 'utf-8')
@@ -70,7 +70,7 @@ app.get('/', async (req, res) => {
       aboutCTAcontent,
       testimonialsContent,
       approachCTAContent,
-      servicesContent,
+      featuredservicesContent,
       emailContent,
       eventsContent,
       partialsPath: `partials`
@@ -109,6 +109,44 @@ app.get('/about', async (req, res) => {
       ogImage: '/img/pjux-og.png',
       ogUrl: 'https://lmf-proto-bff9a3a296aa.herokuapp.com/',
       aboutContent,
+      navContent,
+      emailContent,
+      partialsPath: `partials`
+    });
+  } catch (error) {
+    console.error('Error loading about content:', error.message);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// Define a route for the services page
+
+app.get('/services', async (req, res) => {
+  try {
+    const language = res.locals.language;
+
+    // Load content for the navigation and services page
+    const navContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/nav/${language}.json`), 'utf-8')
+    );
+    const servicesContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/services/${language}.json`), 'utf-8')
+    );
+    const emailContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/email/${language}.json`), 'utf-8')
+    );
+
+    // Dynamically generate the OG URL
+    const ogUrl = `${req.protocol}://${req.get('host')}/services`;
+
+    // Render the Services page with content
+    res.render('services', {
+      title: 'Services - PJUX.io',
+      currentPage: 'services',
+      description: 'Our Services - PJUX.io',
+      ogImage: '/img/pjux-og.png',
+      ogUrl: 'https://lmf-proto-bff9a3a296aa.herokuapp.com/',
+      servicesContent,
       navContent,
       emailContent,
       partialsPath: `partials`
@@ -199,47 +237,7 @@ app.get('/archive', async (req, res) => {
   }
 });
 
-// Define a route for the screenings page
 
-app.get('/screenings', async (req, res) => {
-  try {
-    const language = res.locals.language;
-
-    // Load content for the navigation and events page
-    const navContent = JSON.parse(
-      await fs.readFile(path.join(__dirname, `../data/nav/${language}.json`), 'utf-8')
-    );
-    const screeningsContent = JSON.parse(
-      await fs.readFile(path.join(__dirname, `../data/screenings/${language}.json`), 'utf-8')
-    );
-    const emailContent = JSON.parse(
-      await fs.readFile(path.join(__dirname, `../data/email/${language}.json`), 'utf-8')
-    );
-    const eventsContent = JSON.parse(
-      await fs.readFile(path.join(__dirname, `../data/events/${language}.json`), 'utf-8')
-    );
-
-    // Dynamically generate the OG URL
-    const ogUrl = `${req.protocol}://${req.get('host')}/screenings`;
-
-    // Render the screenings page with content
-    res.render('screenings', {
-      title: 'Screenings - Las Muertes Film',
-      currentPage: 'screenings',
-      description: 'Upcoming screenings of Las Muertes Film.',
-      ogImage: '/img/lmf-og.png',
-      ogUrl,
-      screeningsContent,
-      eventsContent,
-      navContent,
-      emailContent,
-      partialsPath: `partials`
-    });
-  } catch (error) {
-    console.error('Error loading screenings content:', error.message);
-    res.status(500).send('Internal Server Error');
-  }
-});
 
 
 // Define a route to set the language

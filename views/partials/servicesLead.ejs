@@ -1,0 +1,21 @@
+<!-- Services Subpage Lead Section -->
+<div class="container-fluid sub-lead">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-xl-7 col-lg-6 col-sm-12 p-0">
+      <img src="/img/pjux-services.jpg" class="img-fluid sub-lead-hero" alt="A photograph of a woman using a laptop">
+    </div>
+    <div class="col-xl-5 col-lg-6 col-sm-12 p-4">
+      <h1><%= servicesContent.pageTitle %></h1>
+      <p><%= servicesContent.heroBody %></p>
+      <ul class="services-list">
+    <% servicesContent.heroServicesList.forEach(service => { %>
+        <li>
+            <a href="<%= service.href %>" class="service-link">
+                <%= service.name %>
+            </a>
+        </li>
+    <% }); %>
+</ul>
+    </div>
+  </div>
+</div>

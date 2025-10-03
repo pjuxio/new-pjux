@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "fas fa-bolt-lightning",
+    "title": "Digital Strategy",
+    "description": "We can grow your online presence with a targeted approach."
+  },
+  {
+    "icon": "fas fa-mobile-alt",
+    "title": "UI/UX Design",
+    "description": "We design intuitive products with delightful experiences."
+  },
+  {
+    "icon": "fas fa-code",
+    "title": "Websites & Apps",
+    "description": "We build secure, resilient solutions to help meet your goals."
+  }
+]

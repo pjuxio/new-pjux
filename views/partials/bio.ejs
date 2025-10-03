@@ -1,0 +1,28 @@
+<!-- Bio Section -->
+<div class="container-fluid bio offwhite-section">
+    <div class="row d-flex align-items-md-start p-md-2 align-items-lg-center justify-content-center">
+        <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 p-3 p-md-3 order-2 order-lg-1 ">
+            <h2 class="display-6"><%= aboutContent.bioTitle %></h2>
+            <p><strong><%= aboutContent.bioName %></strong> <%= aboutContent.bioContent %></p>
+            <ul>
+                <% aboutContent.bioBullets.forEach(bullet => { %>
+                <li><%= bullet %></li>
+                <% }); %>
+            </ul>
+            <div class="d-flex align-items-center bio-icons mt-4 justify-content-end">
+                <% aboutContent.bioIcons.forEach(icon => { %>
+                <a href="<%= icon.url %>" target="_blank" class="<%= icon.class %>" aria-label="<%= icon.label %>">
+                    <i class="<%= icon.icon %> fa-2x"></i>
+                </a>
+                <% }); %>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-5 col-md-4 col-sm-12 p-3 p-md-4 p-lg-5 order-1 order-lg-2 ">
+            <figure class="figure m-0">
+                <img src="<%= aboutContent.bioImage.src %>" alt="<%= aboutContent.bioImage.alt %>"
+                    class="figure-img img-fluid bio-portrait">
+                <figcaption class="figure-caption text-center"><%= aboutContent.bioCaption %></figcaption>
+            </figure>
+        </div>
+    </div>
+</div>

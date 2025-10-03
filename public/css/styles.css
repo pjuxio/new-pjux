@@ -1,5 +1,5 @@
 .brand {
-    padding: 0.5em .5em;
+    padding: 0.5em 0.5em;
     transition: all 0.3s ease;
     color: white; /* Set the default color to white */
 }
@@ -8,13 +8,25 @@
     color: #2bf0b4; /* Change to aqua-green on hover */
 }
 
+.nav-item {
+    padding: 0 .25em; /* Add horizontal padding between nav items */
+}
+
 .nav-item .nav-link {
     color: #fff !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
+    transition: color 0.3s ease;
 }
 
 .nav-item:hover .nav-link {
     color: #2bf0b4 !important;
+}
+
+.nav-item .nav-link.active {
+    color: #2bf0b4 !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #2bf0b4;
+    padding-bottom: 4px;
 }
 
 .bg-pjuxblue {
@@ -96,6 +108,12 @@ h6 {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1050px) {
+    .hero {
+        height: 40vh;
+    }
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -103,7 +121,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../img/joshua-harris-UUm7bh5I0QM-unsplash.jpg') no-repeat center center;
+    background: url('../img/pjux-hero.jpg') no-repeat center center;
     background-size: cover;
     z-index: -1;
     /* Place the background behind the content */
@@ -161,12 +179,12 @@ h6 {
     }
 }
 
-.services {
+.services-cta {
     background-color: #142d41;
     color: #fff
 }
 
-.services p {
+.services-cta p {
     font-size: 1.2em;
 }   
 
@@ -186,6 +204,14 @@ h6 {
 .email-subheading {
     font-size: 1.1em;
     margin-bottom: 1em;
+}
+
+.bio-portrait {
+    border-radius: 8px; /* Optional: adds rounded corners */
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Optional: Subtle shadow */
 }
 
 .bio-icons i {
@@ -211,10 +237,198 @@ h6 {
     background-color: #F9FAFB;
 }
 
+.sub-lead .col-xl-7,
+.sub-lead .col-lg-6 {
+    overflow: hidden;
+}
+
 .bio {
+    font-size: 1.1em;
+}
+
+.services-section {
     font-size: 1.1em;
 }
 
 .cta-box {
     padding: 3em;
+}
+
+.subCTA {
+    background-color: #1F4E6B;
+    color: #fff;
+}
+
+.subCTA .lead {
+    font-size: 1.3em;
+}
+
+.values-list {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    line-height: 1;
+    font-size: 1em;
+}
+
+.client-logo {
+    padding: 2em 0;
+}
+
+.offwhite-section {
+    background-color: #F9FAFB;
+}
+
+.client-logo {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(20%) brightness(0.9); /* Slightly muted by default */
+}
+
+.client-logo:hover {
+    transform: scale(1.12); /* Grows to 112% of original size */
+    filter: grayscale(0%) brightness(1); /* Full color and brightness on hover */
+}
+
+.values-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.values-list li {
+    position: relative;
+    padding: 10px 0 14px 35px; /* Slightly more vertical padding */
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: .2rem; /* Slightly more margin */
+    transition: all 0.3s ease;
+    color: #142d41;
+}
+
+.values-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: #2bf0b4;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.values-list li:hover {
+    transform: translateX(5px);
+    color: #f0b42b;
+}
+
+.values-list li:hover:before {
+    color: #f0b42b;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sub-lead h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.sub-lead p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 0.5em;
+}
+
+.services-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.services-list li {
+    padding: 18px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-left: 4px solid #2bf0b4;
+    background-color: rgba(43, 240, 180, 0.08);
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+    color: #142d41;
+}
+
+.service-detail-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-detail-list li {
+    position: relative;
+    padding: 8px 0 8px 28px; /* Less padding than values-list */
+    font-size: 1.1rem; /* Smaller font size */
+    font-weight: 500;
+    margin-bottom: 8px; /* Less margin */
+    transition: all 0.3s ease;
+    color: #142d41;
+}
+
+.service-detail-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem; /* Smaller checkmark */
+    color: #2bf0b4;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.service-detail-list li:hover {
+    transform: translateX(5px);
+    color: #f0b42b;
+}
+
+.service-detail-list li:hover:before {
+    color: #f0b42b;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sub-lead-hero {
+    animation: zoomImage 90s infinite;
+}
+
+@keyframes zoomImage {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Optional: Subtle shado
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .service-image {
+        width: 100%;
+        aspect-ratio: 3 / 1;
+        object-fit: cover;
+        object-position: center;
+    }
 }
