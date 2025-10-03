@@ -1,0 +1,15 @@
+<%- include(partialsPath + '/header') %>
+<%- include(partialsPath + '/nav') %>
+<div class="container-fluid bg-darkgreen">
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="display-4 p-3"><%= screeningsContent.pageTitle %></h1>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <%- include(partialsPath + '/events') %>
+</div>
+
+<%- include(partialsPath + '/email') %>
+<%- include(partialsPath + '/footer') %>

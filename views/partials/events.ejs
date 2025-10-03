@@ -1,0 +1,50 @@
+<div class="container-fluid bg-light">
+    <div class="row d-flex justify-content-center pt-5 pb-5">
+        <div class="col-md-10">
+            <h2 class="text-center events-heading mb-5"><%= eventsContent.Heading %></h2>        
+            <!-- Events List -->
+            <div class="row">
+                <% const now = new Date(); %> <!-- Get the current date -->
+                <% let visibleEvents = eventsContent.events.filter(event => new Date(event['iso-date']) >= now); %>
+                <% visibleEvents.forEach((event, index) => { %>
+                    <!-- Add justify-content-center for the second row -->
+                    <% if (index % 3 === 0 && index > 0) { %>
+                        </div><div class="row justify-content-center">
+                    <% } %>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <!-- Calendar Icon -->
+                                    <div class="me-3">
+                                        <i class="bi bi-calendar-event" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <!-- Event Date -->
+                                    <div>
+                                        <span class="mb-0 event-date"><%= event.date %></span><br>
+                                        <small class="text-muted"><%= event.time %></small>
+                                    </div>
+                                </div>
+                                <!-- Event Title -->
+                                <h3 class="card-title"><%= event.title %></h3>
+                                <!-- Event Description -->
+                                <p class="card-text"><%= event.description %></p>
+                                <!-- Event Link -->
+                                <a href="<%= event.link %>" class="btn btn-primary" target="_blank">
+                                    <%= event['link-description'] || eventsContent.Info %>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h3 class="p-4">Bring “Las Muertes Mas Bellas Del Mundo” 
+                        to your community</h3>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScWtsNSUNc3CdkS5MXMus_nVRzR1auduJYa9a5zTpwd5xZigA/viewform" target="blank" class="btn btn-primary"><%= eventsContent.Label %></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

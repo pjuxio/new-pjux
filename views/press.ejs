@@ -1,0 +1,42 @@
+<%- include(partialsPath + '/header') %>
+<%- include(partialsPath + '/nav') %>
+<div class="container-fluid bg-darkgreen">
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="display-4 p-3"><%= pressContent.heading %></h1>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-light p-5">
+  <div class="row d-flex justify-content-center align-items-center mb-5">
+    <div class="col-xl-10 col-lg-12 col-md-12">
+    <% 
+      // Sort articles by isoDate in descending order (newest first)
+      const sortedArticles = pressContent.articles.sort((a, b) => new Date(b.isoDate) - new Date(a.isoDate)); 
+    %>
+    <% sortedArticles.forEach((article, index) => { %> 
+          <div class="card shadow-sm d-flex flex-column flex-md-row align-items-center mb-5">
+            <!-- Image on the top for small screens, left for larger screens -->
+            <div class="col-lg-8 col-md-6 press-img">
+              <a href="<%= article.link %>" target="_blank">
+                <img src="<%= article.image %>" class="img-fluid rounded-start w-100" alt="<%= article.title %>">
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card-body">
+                <blockquote class="blockquote">
+                  <p>&OpenCurlyDoubleQuote;<%= article.description %>&CloseCurlyDoubleQuote;</p>               
+                  <h3 class="card-title">&mdash;<%= article.outlet %></h3>
+                  <p class="card-text mb-2"><%= article.date %></p>
+                </blockquote>
+                <a href="<%= article.link %>" class="btn btn-primary" target="_blank">Read Article</a>
+              </div>
+            </div>
+          </div>
+    <% }); %>
+  </div>
+</div>
+</div>
+<%- include(partialsPath + '/email') %>
+<%- include(partialsPath + '/footer') %>

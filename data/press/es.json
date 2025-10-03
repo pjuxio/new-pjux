@@ -1,0 +1,34 @@
+{
+  "heading": "Press Coverage",
+  "subheading": "Explore the latest coverage of Las Muertes Film.",
+  "articles": [
+    {
+      "title": "Honoring ‘Las Muertes’",
+      "outlet": "Maryland Today",
+      "date": "September 17, 2024",
+      "isoDate": "2024-09-17",
+      "description": "It follows longtime D.C. poet and community activist Quique Avilés, who led the production of the film, and other local Salvadoran artists, including a photographer, a dancer and musicians.",
+      "image": "/img/all-souls.webp",
+      "quote": "It follows longtime D.C. poet and community activist Quique Avilés, who led the production of the film, and other local Salvadoran artists, including a photographer, a dancer and musicians. They explore the often unspoken, intergenerational traumas that have shaped the community of more than 200,000 throughout the D.C. metro area.",
+      "link": "https://today.umd.edu/honoring-las-muertes"
+    },
+    {
+      "title": "Artists In Times Of War",
+      "outlet": "Latino Media Collective",
+      "date": "September 13, 2024",
+      "isoDate": "2024-09-13",
+      "description": "The film tells the story of Washington’s Salvadoran community through art, injustice, and perseverance.",
+      "image": "/img/action-two.webp",
+      "link": "https://example.com/article2"
+    },
+    {
+      "title": "Documentary uses art to explore the making of D.C.’s Salvadorian community",
+      "outlet":"Latino Media Collective",
+      "date": "May 21, 2024",
+      "isoDate": "2024-05-21",
+      "description": "Documentary uses art to explore the making of D.C.’s Salvadorian community",
+      "image": "/img/quique-director.webp",
+      "link": "https://holacultura.com/documentary-uses-art-to-explore-the-making-of-dcs-salvadorian-community/"
+    }
+  ]
+}

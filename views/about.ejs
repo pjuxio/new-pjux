@@ -1,0 +1,45 @@
+<%- include(partialsPath + '/header') %>
+<%- include(partialsPath + '/nav') %>
+<div class="container-fluid p-0 sub-lead">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-7 col-sm-12">
+      <img src="/img/robynne-hu-HOrhCnQsxnQ-unsplash.jpg" class="img-fluid" alt="About Image">
+      </div>
+    <div class="col-lg-5 p-4">
+       <h1 class="display-5"><%= aboutContent.pageTitle %></h1>
+        <p class="lead"><%= aboutContent.heroBody %></p>
+    </div>
+  </div>
+</div>
+  <div class="container-fluid p-0 bio">
+    <div class="row d-flex align-items-center"> 
+      <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 order-2 order-md-1 p-5">
+      <h2 class="display-6">Our Founder</h2>
+      <p><strong>PJ Urquilla</strong> is an entrepreneur, web developer, and creative. He launched PJUX in 2018 to help visionary leaders and entrepreneurs scale their online presence.</p>
+      <ul>
+        <li>Over two decades of experience in digital strategy</li>
+        <li>Expertise in UX design and website development</li>
+        <li>Proven track record of delivering impactful technology products</li>
+        <li>Passionate about collaborating with artists, entrepreneurs, businesses, and non-profits</li>
+        <li>Small business owner and creative thinker with growth mindset</li>
+      </ul>
+      <div class="d-flex align-items-center bio-icons mt-4">        
+        <a href="https://www.linkedin.com/in/pjux" target="_blank" class="me-3" aria-label="LinkedIn">
+        <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/pjuxio" target="_blank" class="me-3" aria-label="GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="/files/pj-urquilla-resume.pdf" target="_blank" aria-label="Resume">
+          <i class="fas fa-file-pdf fa-2x"></i>
+        </a>
+</div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 p-0 order-1 order-md-2">
+        <img src="/img/pj-hs.png" alt="Spectre of Death" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+<%- include(partialsPath + '/email') %>
+<%- include(partialsPath + '/footer') %>

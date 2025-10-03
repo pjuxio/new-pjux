@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-pjuxblue">
+    <div class="container-fluid">
+        <a href="/" class="d-flex align-items-center text-decoration-none">
+            <svg class="brand" fill="currentColor" style="width: 140px; height: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 490.02" alt="Logo">
+    <g>
+        <path d="M0,0H216.18c127.64,0,214.8,56.97,214.8,170.89v1.37c0,115.99-88.53,177.73-218.24,177.73h-52.16v130.4H0V0ZM203.83,235.4c41.18,0,68.63-18.53,68.63-52.85v-1.36c0-35.01-25.39-52.85-67.94-52.85h-43.92v107.06h43.24Z"/>
+        <path d="M301.74,400.8l105-88.53c18.54,26.07,36.38,41.85,62.46,41.85s44.61-21.95,44.61-55.58V0h156.47V295.79c0,63.15-14.41,106.38-50.1,142.06-32.94,32.94-80.98,52.17-138.62,52.17-91.97,0-144.81-37.07-179.81-89.22Z"/>
+        <path d="M700.4,264.92V0h163.34V262.85c0,59.72,30.89,85.1,74.12,85.1s74.12-23.32,74.12-81.66V0h163.33V261.47c0,164.03-95.38,228.54-238.82,228.54s-236.09-65.89-236.09-225.1Z"/>
+        <path d="M1247.94,236.1L1092.14,0h182.56l69.31,114.61L1414.01,0h179.13l-155.79,234.72,162.65,245.67h-182.55l-76.19-124.9-76.86,124.9h-179.12l162.65-244.3Z"/>
+    </g>
+    <rect x="1057.52" y="85.76" width="117.78" height="318.49"/>
+</svg>
+            <span class="brand-text"></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto p-2">
+                <li class="nav-item">
+                    <a class="nav-link <%= currentPage === 'about' ? 'active' : '' %>" href="/about"><%= navContent.about %></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= currentPage === 'press' ? 'active' : '' %>" href="/services"><%= navContent.services %></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= currentPage === 'archive' ? 'active' : '' %>" href="/work"><%= navContent.work %></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <%= currentPage === 'screenings' ? 'active' : '' %>" href="/contact"><%= navContent.contact %></a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+  </nav>

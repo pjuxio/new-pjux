@@ -1,0 +1,14 @@
+{
+  "sitename": "PJUX.io",
+  "home": "Home",
+  "about": "About",
+  "services": "Services",
+  "work": "Work",
+  "blog": "Blog",
+  "contact": "Contact",
+  "language": "Language",
+  "options": {
+    "en": "English",
+    "es": "español"
+  }
+}

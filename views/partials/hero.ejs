@@ -1,0 +1,9 @@
+<div class="container-fluid hero d-flex justify-content-center align-items-center" role="banner">
+  <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 hero-text text-align-center">
+    <h1 class="hero-heading"><%= heroContent.heading  %></h1>
+    <p class="hero-blurb"><%= heroContent.subheading %></p>
+    <a href="<%= heroContent.learnMoreLink || '#' %>" class="btn btn-new btn-lg mt-3" aria-label="Learn more about <%= heroContent.heading || 'our services' %>">
+      <%= heroContent.learnMoreLabel || "Learn More" %>
+    </a>
+  </div>
+</div>

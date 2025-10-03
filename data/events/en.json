@@ -1,0 +1,38 @@
+{
+    "Heading": "Upcoming Events",
+    "Label": "Book a Screening",
+    "Info": "Learn More",
+    "events": [
+         {
+            "date": "April 2, 2025",
+            "iso-date": "2025-04-02",
+            "time": "7:00 PM",
+            "title": "Gettysburg College",
+            "description": "Join us for a free screening followed by Q&A session with members of the Yellow House Collective.",
+            "location": "Joseph Theater",
+            "link": "#",
+            "link-description": "Gettysburg College"
+            
+        },
+        {
+            "date": "April 11, 2025",
+            "iso-date": "2025-04-11",
+            "time": "9:00 PM",
+            "title": "Chicago Latino Film Festival",
+            "description": "Join us for the World Premiere at the Chicago Latino Film Festival followed by a discussion with the directors.",
+            "location": "Landmark’s Century Centre Cinema",
+            "link": "https://chicagolatinofilmfestival.org/project/the-most-beautiful-deaths-in-the-world",
+            "link-description": "Chicago Latino Film Festival"
+        },
+        {
+            "date": "April 12, 2025",
+            "iso-date": "2025-04-12",
+            "time": "6:15 PM",
+            "title": "Chicago Latino Film Festival",
+            "description": "Join us for the World Premiere at the Chicago Latino Film Festival followed by a discussion with the directors.",
+            "location": "Landmark’s Century Centre Cinema",
+            "link": "https://chicagolatinofilmfestival.org/project/the-most-beautiful-deaths-in-the-world",
+            "link-description": "Chicago Latino Film Festival"
+        }
+    ]
+}

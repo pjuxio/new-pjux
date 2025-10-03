@@ -1,0 +1,52 @@
+<%- include(partialsPath + '/header') %>
+<%- include(partialsPath + '/nav') %>
+<div class="container-fluid bg-darkgreen">
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="display-4 p-3"><%= archiveContent.heading %></h1>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-0 bg-light">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-8 col-sm-12">
+      <img src="/img/quique-es.jpg" class="img-fluid" alt="About Image">
+      </div>
+    <div class="col-lg-4 p-4">
+      <p>1980 marked the beginning of an exodus of Salvadorans fleeing a US-backed war, with tens of thousands of people making the Washington, DC, region their new home.</p>
+      <p>This mass migration gave birth to a new artistic movement. Using the corner of 15th & Irving Streets in NW DC as their home base, artists brought meaning to a uniquely <em>Salvadoran-Wachintonian identity.</em></p>
+      <p>In the process, they shaped the city’s vibrant, longstanding, and thriving cultural scene.</p>
+    </div>
+  </div>
+</div>
+<%- include(partialsPath + '/death-mask') %>
+<div class="container-fluid bg-light p-5">
+  <div class="row">
+    <div class="col text-center">
+      <h2 class="display-4 p-3"><%= archiveContent.subheading %></h2>
+    </div>
+  </div>
+      <div class="row d-flex justify-content-center pt-4">
+        <% archiveContent.videos.forEach(video => { %>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <!-- Embed the video -->
+              <div class="ratio ratio-16x9">
+                <iframe 
+                  src="<%= video.source.replace('watch?v=', 'embed/') %>" 
+                  title="<%= video.title %>" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title"><a href="<%= video.source %>"><%= video.title %></a></h3>
+                <p class="card-text"><%= video.description %></p>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+<%- include(partialsPath + '/mixcloud') %>
+<%- include(partialsPath + '/email') %>
+<%- include(partialsPath + '/footer') %>

@@ -1,0 +1,85 @@
+{
+    "pageTitle": "About the Film",
+    "members": [
+        {
+            "firstName": "Mark",
+            "lastName": "Perkins",
+            "img": "/img/mark-perkins.jpg"
+        },
+        {
+            "firstName": "Carolina",
+            "lastName": "Fuentes",
+            "img": "/img/carolina-fuentes.jpg"
+        },
+        {
+            "firstName": "Delia",
+            "lastName": "Beristain Noriega",
+            "img": "/img/delia-beristain-noriega.jpg"
+        },
+        {
+            "firstName": "Hilary",
+            "lastName": "Binder Aviles",
+            "img": "/img/hilary-binder-aviles.jpg"
+        },
+        {
+            "firstName": "Jo",
+            "lastName": "Jovel",
+            "img": "/img/jo-jovel.jpg"
+        },
+        {
+            "firstName": "Magee",
+            "lastName": "McIlvaine",
+            "img": "/img/magee-mcilvaine.jpg"
+        },
+        {
+            "firstName": "Zach",
+            "lastName": "Roberts",
+            "img": "/img/zach-roberts.jfif"
+        },
+        {
+            "firstName": "Jose",
+            "lastName": "Centeno Melendez",
+            "img": "/img/jose-centeno-melendez.jpg"
+        },
+        {
+            "firstName": "Miguel",
+            "lastName": "Castro Luna",
+            "img": "/img/miguel-castro-luna.jpg"
+        },
+        {
+            "firstName": "Huga",
+            "lastName": "Najera",
+            "img": "/img/hugo-najera.jpg"
+        },
+        {
+            "firstName": "Ana",
+            "lastName": "Patricia Rodriguez",
+            "img": "/img/ana-patricia-rodriguez.jpg"
+        },
+        {
+            "firstName": "Olivia ",
+            "lastName": "Cadaval",
+            "img": "/img/olivia-cadaval.jpg"
+        },
+        {
+            "firstName": "Olivia ",
+            "lastName": "Cadaval",
+            "img": "/img/olivia-cadaval.jpg"
+        },
+        {
+            "firstName": "Camilo",
+            "lastName": "Montoya",
+            "img": "/img/camilo-montoya.jpg"
+        },
+        {
+            "firstName": "Sheila",
+            "lastName": "Mirza",
+            "img": "/img/sheila-mirza.jpg"
+        },
+        {
+            "firstName": "Cindy",
+            "lastName": "Centeno",
+            "img": "/img/cindy-centeno.jpg"
+        }
+    ]
+}

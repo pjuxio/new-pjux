@@ -1,0 +1,41 @@
+{
+    "Heading": "Próximos eventos",
+    "Label": "Reservar una proyección",
+    "Info": "Más información",
+    "events": [
+        {
+            "date": "March 23, 2025",
+            "iso-date": "2025-03-23",
+            "time": "7:00 PM",
+            "title": "Ursinius College",
+            "description": "Join us for a free screening followed by Q&A session with members of the Yellow House Collective.",
+            "location": "Joseph Theater",
+            "link": "https://chicagolatinofilmfestival.org/project/the-most-be"
+        },{
+            "date": "April 2, 2025",
+            "iso-date": "2025-04-02",
+            "time": "7:00 PM",
+            "title": "Gettysburg College",
+            "description": "To Do: Translate. Join us on Wednesday, April 2nd for a free #LasMuertesFilm screening followed by Q&A session with members of the Yellow House Collective",
+            "location": "Joseph Theater",
+            "link": "https://chicagolatinofilmfestival.org/project/the-most-be"
+        },{
+            "date": "11 de abril de 2025",
+            "iso-date": "2025-04-11",
+            "time": "9:00 PM",
+            "title": "Festival de Cine Latino de Chicago",
+            "description": "Únase a nosotros para el estreno en Chicago y una discusión con los directores Quique Aviles y Ellie Walton.",
+            "location": "Landmark’s Century Centre Cinema",
+            "link": "https://chicagolatinofilmfestival.org/project/the-most-beautiful-deaths-in-the-world"        
+        },
+        {
+            "date": "12 de abril de 2025",
+            "iso-date": "2025-04-12",
+            "time": "6:15 PM",
+            "title": "Festival de Cine Latino de Chicago",
+            "description": "Únase a nosotros para el estreno en Chicago y una discusión con los directores Quique Aviles y Ellie Walton.",
+            "location": "Landmark’s Century Centre Cinema",
+            "link": "https://chicagolatinofilmfestival.org/project/the-most-beautiful-deaths-in-the-world"
+        }
+    ]
+}
