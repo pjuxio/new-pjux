@@ -1,16 +1,29 @@
-/* ==========================================================================
-   PJUX Custom Styles
-   ========================================================================== */
+/* PJUX Custom Styles
 
 /* Brand Styles */
 .brand {
     padding: 0.5em 0.5em;
-    transition: all 0.3s ease;
-    color: white; /* Set the default color to white */
+    transition: all 0.5s ease;
+    color: white;
+    width: 120px;
+    height: auto;
 }
 
 .brand:hover {
-    color: #2bf0b4; /* Change to aqua-green on hover */
+    color: #2bf0b4;
+}
+
+/* Responsive Brand Sizes */
+@media (max-width: 768px) {
+    .brand {
+        width: 100px; /* Smaller on mobile */
+    }
+}
+
+@media (min-width: 1200px) {
+    .brand {
+        width: 160px; /* Slightly larger on xl screens */
+    }
 }
 
 /* Navigation Styles */
@@ -155,14 +168,19 @@ h6 {
 
 .hero-text {
     text-align: center;
-    /* Center-align text */
     background: rgba(255, 255, 255, 0.9);
-    /* Optional: Semi-transparent background for readability */
-    border-radius: 2px;
-    /* Optional: Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Optional: Subtle shadow */
     padding: 1.5em;
+    transition: all 0.4s ease-out; /* Slower, smoother transition */
+    cursor: pointer;
+}
+
+.hero-text:hover {
+    transform: scale(1.015) translateY(-2px); /* Very subtle scale and lift */
+    box-shadow: 0 6px 15px rgba(43, 240, 180, 0.15); /* Even softer shadow */
+    background: rgba(255, 255, 255, 0.93);
+    border: 1px solid rgba(43, 240, 180, 0.2); /* Very subtle border */
 }
 
 .hero-blurb {
@@ -200,7 +218,16 @@ h6 {
 }   
 
 .service-card i {
-    color: #F0A32B; /* Icon color */
+    color: #F0A32B;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+
+.service-card i:hover {
+    transform: scale(1.2) rotate(5deg); /* Scale and slight rotation */
+    filter: brightness(1.2) drop-shadow(0 4px 8px rgba(240, 180, 43, 0.3));
+    color: #2bf0b4;
 }
 
 .bg-title {
@@ -222,15 +249,27 @@ h6 {
     max-width: 100%;
     height: auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Optional: Subtle shadow */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    filter: brightness(0.95); /* Slightly muted by default */
+}
+
+.bio-portrait:hover {
+    transform: scale(1.05) translateY(-3px); /* Scale and lift */
+    filter: brightness(1.05); /* Brighter on hover */
+    box-shadow: 0 8px 25px rgba(43, 240, 180, 0.3); /* Brand color shadow */
 }
 
 .bio-icons i {
     color: #142d41;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    filter: brightness(0.9); /* Slightly muted by default */
 }
 
 .bio-icons i:hover {
+    transform: scale(1.12); /* Grows to 112% of original size */
+    filter: brightness(1.1); /* Brighter on hover */
     color: #f0b42b;
 }
 
@@ -428,11 +467,18 @@ h6 {
 .service-image {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional: adds rounded corners */
+    border-radius: 8px;
     max-width: 100%;
-    height: auto;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Optional: Subtle shadow */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    filter: brightness(0.95); /* Slightly muted by default */
+}
+
+.service-image:hover {
+    transform: scale(1.02) translateY(-3px); /* Scale and lift */
+    filter: brightness(1.05); /* Brighter on hover */
+    box-shadow: 0 8px 25px rgba(43, 240, 180, 0.3); /* Brand color shadow */
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
