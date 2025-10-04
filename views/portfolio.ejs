@@ -1,0 +1,29 @@
+<%- include(partialsPath + '/header' ) %>
+  <%- include(partialsPath + '/nav' ) %>
+    <%- include(partialsPath + '/subpage-title' , { title: 'Portfolio' } ) %>
+
+      <% // Sort projects by order field (if it exists), otherwise use array order const
+        sortedProjects=portfolioContent.projects.sort((a, b)=> {
+        // If both have order field, sort by it
+        if (a.order && b.order) {
+        return a.order - b.order;
+        }
+        // If only one has order, prioritize it
+        if (a.order && !b.order) return -1;
+        if (!a.order && b.order) return 1;
+        // If neither has order, maintain original array order
+        return 0;
+        });
+        %>
+
+        <!-- Use sortedProjects instead of portfolioContent.projects -->
+        <% sortedProjects.forEach((project, index)=> { %>
+          <%- include('partials/portfolio-listing', { project: project, projectKey: project.id }) %>
+
+            <% if (index < sortedProjects.length - 1) { %>
+              <%- include('partials/seperator') %>
+                <% } %>
+                  <% }); %>
+
+                    <%- include(partialsPath + '/email' ) %>
+                      <%- include(partialsPath + '/footer' ) %>

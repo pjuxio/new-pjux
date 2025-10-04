@@ -1,0 +1,69 @@
+{
+  "pageTitle": "Portfolio: PJUX.io",
+  "projects": [{
+      "id": "chisholm",
+      "project": "The Chisholm Legacy Project",
+      "projectDescription": "We helped TCLP launch their site in 2022 and have worked with them since to establish their digital presence and build tools for their program work.",
+      "services": [
+        "Resource hub for climate justice organizers",
+        "Online engagement for supporters and activists",
+        "Provide extended digital capacity for program teams"
+      ],
+      "viewSite": "View site",
+      "viewSiteAlt": "Image of a computer, tablet and phone showing the The Chisholm Legacy Project website",
+      "siteUrl": "https://www.thechisholmlegacyproject.org",
+      "image": "/img/portfolio-tclp.jpg",
+      "featured": false,
+      "order": 1
+    },
+    {
+      "id": "workersrights",
+      "project": "WorkersRights.org",
+      "projectDescription": "We helped the Workers Rights Consortium modernize their website and solve critical issues with their WordPress operations.",
+      "services": [
+        "Migrated content going back decades from old site",
+        "Developed new streamlined information architecture",
+        "Established secure donation tool for online giving",
+        "Streamlined management for in-house team"
+      ],
+      "viewSite": "Visit the site",
+      "viewSiteAlt": "Workers Rights Consortium website screenshot",
+      "siteUrl": "https://www.workersrights.org",
+      "image": "/img/work_wrc.png",
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "sali",
+      "project": "ShannonAli.media",
+      "projectDescription": "We helped Shannon launch her website to promote her career as a music writer.",
+      "services": [
+        "Featured catalog of Shannon's published writings",
+        "Lead capture form for clients and industry contacts",
+        "Easy to update for future content additions"
+      ],
+      "viewSite": "Visit ShannonAli.media",
+      "viewSiteAlt": "Image of a computer, tablet and phone showing the ShannonAli.media website",
+      "siteUrl": "https://www.shannonali.media",
+      "image": "/img/portfolio-sali.jpg",
+      "featured": false,
+      "order": 3
+    },
+    {
+      "id": "russfinkelstein",
+      "project": "RussFinkelstein.com",
+      "projectDescription": "We helped Russ launch his website to promote his coaching business and his writing.",
+      "services": [
+        "Featured catalog of Russ's work",
+        "Client testimonials to support his lead capture efforts",
+        "Managed WordPress hosting and maintenance"
+      ],
+      "viewSite": "Visit RussFinkelstein.com",
+      "viewSiteAlt": "Image of a computer, tablet and phone showing the RussFinkelstein.com website",
+      "siteUrl": "https://www.russfinkelstein.com",
+      "image": "/img/portfolio-rf.jpg",
+      "featured": false,
+      "order": 2
+    }
+  ]
+}

@@ -1,58 +1,51 @@
 {
-    "pageTitle": "About PJUX",
-    "heroBody": "We are a digital agency committed to exceptional user experiences and innovative design. Our cost-effective solutions can help your business thrive in the digital age.",
-    "heroImage": {
-        "src": "/img/pjux-wave.jpg",
-        "alt": "A photograph of a wave"
+  "pageTitle": "About PJUX",
+  "heroBody": "We are a digital agency committed to exceptional user experiences and innovative design. Our cost-effective solutions can help your business thrive in the digital age.",
+  "heroImage": {
+    "src": "/img/pjux-wave.jpg",
+    "alt": "A photograph of a wave"
+  },
+  "ctaLead": "We create sustainable technology solutions that make magic. Our human-centered design and agile approach deliver exceptional results for our clients.",
+  "ctaButton": "Book a Consultation",
+  "bioTitle": "Our founder",
+  "bioName": "PJ Urquilla",
+  "bioContent": "is an entrepreneur, web developer, and creative. He started PJUX in 2018 to help visionary leaders and entrepreneurs scale their online presence.",
+  "bioImage": {
+    "src": "/img/pjux-portrait.jpg",
+    "alt": "PJ Urquilla, Founder & CEO of PJUX"
+  },
+  "bioCaption": "PJ Urquilla, Founder & CEO",
+  "bioBullets": [
+    "Over two decades of experience in digital strategy",
+    "Expertise in UX design and website development",
+    "Proven track record of delivering impactful technology products",
+    "Passionate about collaborating with artists, entrepreneurs, businesses, and non-profits",
+    "Small business owner and creative thinker with growth mindset"
+  ],
+  "bioIcons": [{
+      "url": "https://www.linkedin.com/in/pjux",
+      "icon": "fab fa-linkedin",
+      "label": "LinkedIn",
+      "class": "me-3"
     },
-    "ctaLead": "We create sustainable technology solutions that make magic. Our human-centered design approach and agile approach deliver exceptional results for our clients.",
-    "ctaButton": "Book a Consultation",
-    "bioTitle": "Our Founder",
-    "bioName": "PJ Urquilla",
-    "bioContent": "is an entrepreneur, web developer, and creative. He started PJUX in 2018 to help visionary leaders and entrepreneurs scale their online presence.",
-    "bioImage": {
-        "src": "/img/pjux-portrait.jpg",
-        "alt": "PJ Urquilla, Founder & CEO of PJUX"
-    },
-    "bioCaption": "PJ Urquilla, Founder & CEO",
-    "bioBullets": [
-        "Over two decades of experience in digital strategy",
-        "Expertise in UX design and website development", 
-        "Proven track record of delivering impactful technology products",
-        "Passionate about collaborating with artists, entrepreneurs, businesses, and non-profits",
-        "Small business owner and creative thinker with growth mindset"
-    ],
-    "bioIcons": [
-        {
-            "url": "https://www.linkedin.com/in/pjux",
-            "icon": "fab fa-linkedin",
-            "label": "LinkedIn",
-            "class": "me-3"
-        },
-        {
-            "url": "https://github.com/pjuxio",
-            "icon": "fab fa-github", 
-            "label": "GitHub",
-            "class": "me-3"
-        },
-        {
-            "url": "/files/pj-urquilla-resume.pdf",
-            "icon": "fas fa-file-pdf",
-            "label": "Resume",
-            "class": ""
-        }
-    ],
-    "valuesTitle": "Our Values",
-    "valuesList": [
-        "Justice",
-        "Community", 
-        "Equity",
-        "Creativity",
-        "Joy",
-        "Earth-first"
-    ],
-    "valuesImage": {
-        "src": "/img/pjux-values.jpg",
-        "alt": "An aerial photograph of a road through a forest"
+    {
+      "url": "/files/pj-urquilla-resume.pdf",
+      "icon": "fas fa-file-pdf",
+      "label": "Resume",
+      "class": ""
     }
+  ],
+  "valuesTitle": "Our Values",
+  "valuesList": [
+    "Justice",
+    "Community",
+    "Equity",
+    "Creativity",
+    "Joy",
+    "Earth-first"
+  ],
+  "valuesImage": {
+    "src": "/img/pjux-values.jpg",
+    "alt": "An aerial photograph of a road through a forest"
+  }
 }

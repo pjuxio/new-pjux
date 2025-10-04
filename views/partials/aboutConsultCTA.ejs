@@ -2,8 +2,14 @@
 <div class="container-fluid p-5 subCTA">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-xl-7 col-lg-10 col-sm-12 text-center">
-      <p class="lead"><%= aboutContent.ctaLead %></p>
-          <a href="#" class="btn btn-new btn-lg mt-3" aria-label="#"><%= aboutContent.ctaButton %></a>
+      <h3 class="mb-3">Ready to Get Started?</h3>
+      <p class="lead mb-4">
+        <%= aboutContent.ctaLead %>
+      </p>
+      <a href="/contact" class="btn btn-new btn-lg" aria-label="Book a consultation">
+        <i class="fas fa-calendar-check me-2"></i>
+        <%= aboutContent.ctaButton %>
+      </a>
     </div>
   </div>
 </div>

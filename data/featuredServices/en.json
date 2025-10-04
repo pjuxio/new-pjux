@@ -1,8 +1,7 @@
-[
-  {
+[{
     "icon": "fas fa-bolt-lightning",
     "title": "Digital Strategy",
-    "description": "We can grow your online presence with a targeted approach."
+    "description": "We bring a targeted approach to grow your online presence."
   },
   {
     "icon": "fas fa-mobile-alt",
@@ -12,6 +11,6 @@
   {
     "icon": "fas fa-code",
     "title": "Websites & Apps",
-    "description": "We build secure, resilient solutions to help meet your goals."
+    "description": "We offer secure, resilient solutions to help meet your goals."
   }
 ]

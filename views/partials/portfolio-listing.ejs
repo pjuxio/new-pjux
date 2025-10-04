@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row d-flex align-items-start align-items-xl-center justify-content-center p-4">
+    <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 p-2 p-xl-4 order-2 order-lg-2">
+      <!--<% if (project.featured) { %>
+        <span class="featured-badge">Featured Work</span>
+        <% } %>-->
+
+      <h2>
+        <%= project.project %>
+      </h2>
+      <p class="lead">
+        <%= project.projectDescription %>
+      </p>
+
+      <ul class="service-detail-list">
+        <% project.services.forEach(service=> { %>
+          <li>
+            <%= service %>
+          </li>
+          <% }); %>
+      </ul>
+
+      <a href="<%= project.siteUrl %>" class="btn btn-new btn-sm" target="_blank" rel="noopener">
+        <i class="fas fa-external-link-alt me-2"></i>
+        <%= project.viewSite %>
+      </a>
+    </div>
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 p-1 p-xl-2 order-1 order-lg-1">
+      <img src="<%= project.image %>" alt="<%= project.viewSiteAlt %>" class="portfolio-img img-fluid">
+    </div>
+  </div>
+</div>

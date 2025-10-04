@@ -22,7 +22,11 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Middleware for parsing JSON, cookies, and sessions
 app.use(express.json());
 app.use(cookieParser());
-app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: true }));
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: true
+}));
 
 // Use the language middleware
 app.use(languageMiddleware);
@@ -57,6 +61,9 @@ app.get('/', async (req, res) => {
     const approachCTAContent = JSON.parse(
       await fs.readFile(path.join(__dirname, `../data/approachCTA/${language}.json`), 'utf-8')
     );
+    const portfolioContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/portfolio/${language}.json`), 'utf-8')
+    );
 
     // Render the index page with content
     res.render('index', {
@@ -70,6 +77,7 @@ app.get('/', async (req, res) => {
       aboutCTAcontent,
       testimonialsContent,
       approachCTAContent,
+      portfolioContent,
       featuredservicesContent,
       emailContent,
       eventsContent,
@@ -147,6 +155,82 @@ app.get('/services', async (req, res) => {
       ogImage: '/img/pjux-og.png',
       ogUrl: 'https://lmf-proto-bff9a3a296aa.herokuapp.com/',
       servicesContent,
+      navContent,
+      emailContent,
+      partialsPath: `partials`
+    });
+  } catch (error) {
+    console.error('Error loading about content:', error.message);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// Define a route for the portfolio page
+
+app.get('/portfolio', async (req, res) => {
+  try {
+    const language = res.locals.language;
+
+    // Load content for the navigation and portfolio page
+    const navContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/nav/${language}.json`), 'utf-8')
+    );
+    const portfolioContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/portfolio/${language}.json`), 'utf-8')
+    );
+    const emailContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/email/${language}.json`), 'utf-8')
+    );
+
+    // Dynamically generate the OG URL
+    const ogUrl = `${req.protocol}://${req.get('host')}/portfolio`;
+
+    // Render the Portfolio page with content
+    res.render('portfolio', {
+      title: 'Portfolio - PJUX.io',
+      currentPage: 'portfolio',
+      description: 'Our Work - PJUX.io',
+      ogImage: '/img/pjux-og.png',
+      ogUrl: 'https://lmf-proto-bff9a3a296aa.herokuapp.com/',
+      portfolioContent,
+      navContent,
+      emailContent,
+      partialsPath: `partials`
+    });
+  } catch (error) {
+    console.error('Error loading about content:', error.message);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// Define a route for the contact page
+
+app.get('/contact', async (req, res) => {
+  try {
+    const language = res.locals.language;
+
+    // Load content for the navigation and contact page
+    const navContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/nav/${language}.json`), 'utf-8')
+    );
+    const contactContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/contact/${language}.json`), 'utf-8')
+    );
+    const emailContent = JSON.parse(
+      await fs.readFile(path.join(__dirname, `../data/email/${language}.json`), 'utf-8')
+    );
+
+    // Dynamically generate the OG URL
+    const ogUrl = `${req.protocol}://${req.get('host')}/contact`;
+
+    // Render the Contact page with content
+    res.render('contact', {
+      title: 'Contact - PJUX.io',
+      currentPage: 'contact',
+      description: 'Get in touch with us - PJUX.io',
+      ogImage: '/img/pjux-og.png',
+      ogUrl: 'https://lmf-proto-bff9a3a296aa.herokuapp.com/',
+      contactContent,
       navContent,
       emailContent,
       partialsPath: `partials`
@@ -242,12 +326,17 @@ app.get('/archive', async (req, res) => {
 
 // Define a route to set the language
 app.post('/set-language', (req, res) => {
-  const { language } = req.body;
+  const {
+    language
+  } = req.body;
   const supportedLanguages = ['en', 'es']; // Define supported languages
 
   if (supportedLanguages.includes(language)) {
     req.session.language = language; // Store in session
-    res.cookie('language', language, { maxAge: 900000, httpOnly: true }); // Store in cookies
+    res.cookie('language', language, {
+      maxAge: 900000,
+      httpOnly: true
+    }); // Store in cookies
     res.sendStatus(200); // Success
   } else {
     res.status(400).send('Invalid language selection'); // Reject invalid input
@@ -259,7 +348,10 @@ app.get('/test-files', async (req, res) => {
   try {
     const events = JSON.parse(await fs.readFile(eventsPath, 'utf-8'));
     const testimonials = JSON.parse(await fs.readFile(testimonialsPath, 'utf-8'));
-    res.json({ events, testimonials });
+    res.json({
+      events,
+      testimonials
+    });
   } catch (error) {
     console.error('Error accessing files:', error);
     res.status(500).send('Error accessing files');

@@ -48,6 +48,41 @@
     border-bottom: 2px solid #2bf0b4;
     padding-bottom: 4px;
 }
+
+@media (max-width: 991.98px) {
+    .navbar-collapse .nav-item .nav-link.active {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+/* Font Awesome Navbar Toggle Styling */
+.navbar-toggler {
+    border: 2px solid #2bf0b4 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease;
+    padding: 8px 12px !important;
+    background: none !important;
+}
+
+.navbar-toggler:hover {
+    border-color: #f0b42b !important;
+    background-color: rgba(43, 240, 180, 0.1) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(43, 240, 180, 0.25) !important;
+}
+
+.navbar-toggler i {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-toggler:hover i {
+    color: #f0b42b;
+}
 /* Background Color Utility Class */
 
 .bg-pjuxblue {
@@ -69,6 +104,7 @@
 .btn-primary:hover {
     background-color: #2bf0b4 !important;
     border-color: #2bf0b4 !important;
+    color: #0D1E2B !important;
 }
 
 .btn-new:hover {
@@ -82,7 +118,6 @@
     border-color: #2bf0b4 !important;
     color: #0D1E2B !important;
     padding: 10px 25px !important;
-    font-weight: 600 !important;
 }
 
 .btn-services {
@@ -404,6 +439,12 @@ h6 {
     color: #142d41;
 }
 
+.services-list li:hover {
+    background-color: rgba(240, 180, 43, 0.12);
+    border-left-color: #f0b42b;
+    transform: translateX(5px);
+}
+
 .service-detail-list {
     list-style: none;
     padding-left: 0;
@@ -441,6 +482,24 @@ h6 {
     transform: translateY(-50%) scale(1.1);
 }
 
+/* Service Card Icon Adjustments for Medium Screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .service-card {
+        padding: 1rem; /* Reduce overall card padding */
+    }
+    
+    .service-card i {
+        font-size: 2.2rem; /* Smaller icon size */
+        padding: 0.3rem; /* Minimal padding around icons */
+        margin-bottom: 0.3rem; /* Tighter spacing */
+    }
+    
+    .service-card h5 {
+        font-size: 1rem; /* Slightly smaller heading if needed */
+        margin-top: 0.5rem;
+    }
+}
+
 .sub-lead-hero {
     animation: zoomImage 90s infinite;
 }
@@ -456,6 +515,24 @@ h6 {
 
     100% {
         transform: scale(1);
+    }
+}
+
+/* Apply aspect ratio change only to services lead hero image */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .services-lead {
+        aspect-ratio: 3 / 1;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* Apply aspect ratio change only to about lead hero image */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .about-lead {
+        aspect-ratio: 4 / 3; /* Slightly less dramatic than services */
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -488,4 +565,79 @@ h6 {
         object-fit: cover;
         object-position: center;
     }
+}
+
+.featured-badge {
+    display: inline-block;
+    background-color: #F0A32B; /* Bright accent color */
+    color: #0D1E2B;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 0; /* Perfect rectangle */
+}
+
+/* Bio List Styling */
+.bio ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bio ul li {
+    position: relative;
+    padding: 8px 0 8px 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    color: #142d41;
+}
+
+.bio ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #2bf0b4;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.bio ul li:hover {
+    transform: translateX(5px);
+    color: #f0b42b;
+}
+
+.bio ul li:hover:before {
+    color: #f0b42b;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.pjux-seperator hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #2bf0b4 20%, #f0b42b 50%, #2bf0b4 80%, transparent 100%);
+    margin: 1 rem 0;
+    opacity: 0.8;
+}
+
+.subpage-title {
+    background-color: #142d41;
+    color: #ffffff;
+    padding: .1rem 0;
+    border-bottom: 2px solid #2bf0b4;
+}
+
+.portfolio-img {
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.portfolio-img:hover {
+    transform: scale(1.02) translateY(-3px);
+    filter: brightness(1.08);
 }

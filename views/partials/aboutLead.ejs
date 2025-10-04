@@ -1,12 +1,17 @@
 <!-- About Subpage Lead Section -->
 <div class="container-fluid sub-lead">
   <div class="row justify-content-center align-items-center">
-    <div class="col-xl-7 col-lg-6 col-sm-12 p-0">
-      <img src="<%= aboutContent.heroImage.src %>" class="img-fluid sub-lead-hero" alt="<%= aboutContent.heroImage.alt %>">
+    <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 p-0">
+      <img src="<%= aboutContent.heroImage.src %>" class="img-fluid sub-lead-hero about-lead"
+        alt="<%= aboutContent.heroImage.alt %>">
     </div>
-    <div class="col-xl-5 col-lg-6 col-sm-12 p-4">
-      <h1><%= aboutContent.pageTitle %></h1>
-      <p><%= aboutContent.heroBody %></p>
+    <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 p-4">
+      <h1>
+        <%= aboutContent.pageTitle %>
+      </h1>
+      <p>
+        <%= aboutContent.heroBody %>
+      </p>
     </div>
   </div>
 </div>

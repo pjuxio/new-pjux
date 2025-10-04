@@ -1,18 +1,17 @@
 {
-    "pageTitle": "Our Services",
-    "heroBody": "We have the technology and expertise to help visionary leaders thrive in a digital-first world.",
-    "heroServicesList": [
-        {
-            "name": "Digital Strategy",
-            "href": "#digital-strategy"
-        },
-        {
-            "name": "User Experience (UX) Design",
-            "href": "#ux-design"
-        },
-        {
-            "name": "Website & App Development",
-            "href": "#web-development"
-        }
-    ]
+  "pageTitle": "Our Services",
+  "heroBody": "We have the expertise to help visionary leaders thrive in a digital-first world.",
+  "heroServicesList": [{
+      "name": "Digital Strategy",
+      "href": "#digital-strategy"
+    },
+    {
+      "name": "User Experience (UX) Design",
+      "href": "#ux-design"
+    },
+    {
+      "name": "Website & App Development",
+      "href": "#web-development"
+    }
+  ]
 }

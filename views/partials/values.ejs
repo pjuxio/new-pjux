@@ -1,16 +1,20 @@
 <!-- Values Section -->
-<div class="container-fluid values-section">
-    <div class="row d-flex align-items-center">
-        <div class="col-xl-7 col-lg-8 col-md-12 col-sm-12 p-0">
-            <img src="<%= aboutContent.valuesImage.src %>" alt="<%= aboutContent.valuesImage.alt %>" class="img-fluid">
-        </div>
-        <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12 p-3 p-sm-5">
-            <h2 class="display-6"><%- aboutContent.valuesTitle %></h2>
-            <ul class="values-list">
-                <% aboutContent.valuesList.forEach(value => { %>
-                <li><%= value %></li>
-                <% }); %>
-            </ul>
-        </div>
+<div class="container-fluid services-section" id="ux-design">
+  <div class="row d-flex align-items-start align-items-xl-center justify-content-center p-3 p-lg-5">
+    <div class="col-xl-5 col-lg-7 col-md-12 col-sm-12 p-0 p-lg-3 order-2">
+      <h2 class="display-6 pt-3"><%- aboutContent.valuesTitle %></h2>
+      <p class="lead">Our designs put the user first to help us quickly prototype experiences we can test with real
+        customers.</p>
+      <ul class="values-list">
+        <% aboutContent.valuesList.forEach(value=> { %>
+          <li>
+            <%= value %>
+          </li>
+          <% }); %>
+      </ul>
     </div>
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 p-0 p-lg-4 order-1">
+      <img src="<%= aboutContent.valuesImage.src %>" alt="UX/UI design" class="service-image img-fluid">
+    </div>
+  </div>
 </div>

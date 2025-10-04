@@ -1,4 +1,4 @@
-<!-- Services Subpage Lead Section -->
+<!-- Work Subpage Lead Section -->
 <div class="container-fluid sub-lead">
   <div class="row justify-content-center align-items-center">
     <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 p-0">
@@ -7,20 +7,11 @@
     </div>
     <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 p-4">
       <h1>
-        <%= servicesContent.pageTitle %>
+        Our work
       </h1>
       <p>
-        <%= servicesContent.heroBody %>
+        A selection of projects showcasing our expertise in web design, development, and digital strategy.
       </p>
-      <ul class="services-list">
-        <% servicesContent.heroServicesList.forEach(service=> { %>
-          <li>
-            <a href="<%= service.href %>" class="service-link">
-              <%= service.name %>
-            </a>
-          </li>
-          <% }); %>
-      </ul>
     </div>
   </div>
 </div>
